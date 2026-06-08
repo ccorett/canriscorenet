@@ -1,21 +1,12 @@
 import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
-
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-})
+import { getSql } from "@/lib/db"
 
 export async function POST(request: Request) {
   try {
     const data = await request.json()
-    
     const { name, businessName, phone, email, service, details } = data
 
-    // Validate required fields
     if (!name || !phone || !service) {
       return NextResponse.json(
         { error: "Missing required fields" },
@@ -23,65 +14,36 @@ export async function POST(request: Request) {
       )
     }
 
-    // Send email using Gmail SMTP
-    await transporter.sendMail({
-      from: `"Canris Website" <${process.env.GMAIL_USER}>`,
-      to: "canriscore@gmail.com",
-      subject: `New Quote Request from ${name}`,
-      html: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <style>
-              body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #0d1117 0%, #1a1f2e 100%); color: #00dcd4; padding: 20px; border-radius: 8px 8px 0 0; }
-              .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
-              .field { margin-bottom: 15px; }
-              .label { font-weight: bold; color: #555; }
-              .value { margin-top: 5px; padding: 10px; background: #fff; border-radius: 4px; border-left: 3px solid #00dcd4; }
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <div class="header">
-                <h2 style="margin: 0;">New Quote Request</h2>
-              </div>
-              <div class="content">
-                <div class="field">
-                  <div class="label">Name</div>
-                  <div class="value">${name}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Business Name</div>
-                  <div class="value">${businessName || "Not provided"}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Phone Number</div>
-                  <div class="value">${phone}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Email Address</div>
-                  <div class="value">${email || "Not provided"}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Service Requested</div>
-                  <div class="value">${service}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Additional Details</div>
-                  <div class="value">${details || "None provided"}</div>
-                </div>
-                <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;" />
-                <p style="font-size: 12px; color: #888;">
-                  This quote request was submitted through the Canris website on ${new Date().toLocaleString("en-US", { dateStyle: "full", timeStyle: "short" })}.
-                </p>
-              </div>
-            </div>
-          </body>
-        </html>
-      `,
-    })
+    const sql = getSql()
+    await sql`
+      INSERT INTO quote_requests (name, business_name, phone, email, service, details)
+      VALUES (${name}, ${businessName || null}, ${phone}, ${email || null}, ${service}, ${details || null})
+    `
+
+    if (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.GMAIL_USER,
+          pass: process.env.GMAIL_APP_PASSWORD,
+        },
+      })
+
+      await transporter.sendMail({
+        from: `"Canris Website" <${process.env.GMAIL_USER}>`,
+        to: "canriscore@gmail.com",
+        subject: `New Quote Request from ${name}`,
+        html: `
+          <h2>New Quote Request</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Business Name:</strong> ${businessName || "Not provided"}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Email:</strong> ${email || "Not provided"}</p>
+          <p><strong>Service:</strong> ${service}</p>
+          <p><strong>Details:</strong> ${details || "None provided"}</p>
+        `,
+      })
+    }
 
     return NextResponse.json({ success: true })
   } catch (error) {
