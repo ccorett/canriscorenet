@@ -3,61 +3,73 @@ import { Footer } from "@/components/footer"
 import { CalendlyProvider, CalendlyTrigger } from "@/components/calendly-popup"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Button } from "@/components/ui/button"
-import { Search, Map, Hammer, RefreshCw, MessageCircle } from "lucide-react"
+import { Search, Map, Hammer, RefreshCw, TrendingUp, MessageCircle } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "How We Work | Canris",
-  description: "Learn about our structured approach to system assessment, architecture design, engineering, and deployment.",
+  description: "Learn about CANRIS's structured digitalisation process — from understanding operations through to deployment, enablement and continuous improvement.",
 }
 
 const processSteps = [
   {
     number: "01",
     icon: Search,
-    title: "Assess",
-    description: "We assess your current systems, infrastructure, and operational requirements to identify gaps and define what needs to be built.",
+    title: "Understand Operations",
+    description: "We review workflows, existing systems and operational challenges to understand how your organisation works today and where digitalisation can create the greatest impact.",
     details: [
-      "Current system evaluation",
-      "Infrastructure assessment",
-      "Gap identification and analysis",
-      "Requirements definition"
+      "Workflow and process review",
+      "Existing systems assessment",
+      "Operational challenge identification",
+      "Digitalisation opportunity mapping"
     ]
   },
   {
     number: "02",
     icon: Map,
-    title: "Architect",
-    description: "We design the solution architecture with clear technical specifications, integration points, and deployment strategy.",
+    title: "Design the Solution",
+    description: "We define the future operational model and supporting system architecture, ensuring every digital component serves a clear business outcome.",
     details: [
-      "System architecture design",
-      "Integration mapping",
-      "Technical specification",
-      "Deployment planning"
+      "Future operational model design",
+      "Digital workflow planning",
+      "System architecture definition",
+      "Implementation roadmap"
     ]
   },
   {
     number: "03",
     icon: Hammer,
-    title: "Engineer and Integrate",
-    description: "We engineer the systems and integrate components. Structured execution with continuous oversight and quality assurance.",
+    title: "Engineer & Integrate",
+    description: "We build, configure and connect the required systems, integrating them into your operations to create seamless, connected digital workflows.",
     details: [
-      "System engineering",
-      "Platform integration",
-      "Progress tracking and reporting",
-      "Quality assurance throughout"
+      "System engineering and configuration",
+      "Business system integration",
+      "Workflow automation setup",
+      "Quality assurance throughout delivery"
     ]
   },
   {
     number: "04",
     icon: RefreshCw,
-    title: "Deploy and Monitor",
-    description: "We deploy systems and enable usage. Ongoing monitoring ensures performance is maintained and refined over time.",
+    title: "Deploy & Enable",
+    description: "We implement the solution and prepare teams for successful adoption, ensuring digital operations are ready to deliver value from day one.",
     details: [
-      "System deployment",
-      "User enablement",
-      "Performance monitoring",
-      "Continuous refinement"
+      "Solution deployment and rollout",
+      "Team training and enablement",
+      "Operational handover",
+      "Adoption support"
+    ]
+  },
+  {
+    number: "05",
+    icon: TrendingUp,
+    title: "Monitor & Improve",
+    description: "We measure performance, optimise workflows and continuously improve operations to ensure lasting operational value from your digital transformation.",
+    details: [
+      "Performance measurement and reporting",
+      "Workflow optimisation",
+      "Operational feedback and refinement",
+      "Continuous improvement planning"
     ]
   }
 ]
@@ -71,7 +83,7 @@ const morePillars = [
   {
     letter: "O",
     title: "Own Success",
-    description: "Take accountability for delivery and outcomes. Technical execution with measurable results."
+    description: "Take accountability for delivery and outcomes. Structured execution with measurable business results."
   },
   {
     letter: "R",
@@ -81,7 +93,7 @@ const morePillars = [
   {
     letter: "E",
     title: "Expand Perspective",
-    description: "Adapt solutions based on broader operational impact. Systems should serve your organization today and into the future."
+    description: "Adapt solutions based on broader operational impact. Digital operations should serve your organisation today and into the future."
   }
 ]
 
@@ -101,7 +113,7 @@ export default function HowWeWorkPage() {
                 How We Work
               </h1>
               <p className="mt-6 text-xl text-[#001920]/70 leading-relaxed">
-                We assess systems, architect solutions, engineer integrations, and deploy with structured oversight. A systematic approach that ensures reliability and operational performance.
+                We follow a structured digitalisation process — from understanding how your organisation operates through to deploying connected digital systems and continuously improving performance.
               </p>
             </div>
           </section>
@@ -110,7 +122,7 @@ export default function HowWeWorkPage() {
           <section className="bg-white px-4 py-16 md:py-24">
             <div className="mx-auto max-w-5xl">
               <h2 className="text-3xl font-bold text-[#001920] text-center mb-12">
-                Our Process
+                Our Digitalisation Process
               </h2>
               
               <div className="space-y-12">
@@ -159,7 +171,7 @@ export default function HowWeWorkPage() {
                   The M.O.R.E. Approach
                 </h2>
                 <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-                  Our project management approach ensures systems are delivered in a structured and controlled manner.
+                  Our project management framework ensures digital transformation initiatives are delivered with structure, accountability and measurable business outcomes.
                 </p>
               </div>
               
@@ -189,7 +201,7 @@ export default function HowWeWorkPage() {
                 Ready to Start Your Project?
               </h2>
               <p className="mt-4 text-lg text-[#001920]/70">
-                Define the right system architecture for your organization.
+                Discover how CANRIS can help digitise your business operations and create connected, efficient workflows across your organisation.
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <CalendlyTrigger>

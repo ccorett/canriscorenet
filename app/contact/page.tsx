@@ -9,8 +9,9 @@ import { Phone, MessageCircle, Mail, Send } from "lucide-react"
 import { useState } from "react"
 
 const services = [
-  "Custom Systems Engineering",
-  "Systems Integration and Automation",
+  "Operational Analysis & Process Design",
+  "Systems Engineering",
+  "Systems Integration & Automation",
   "IT Project Management",
   "IT Consultancy",
   "Not sure yet"
@@ -65,7 +66,7 @@ export default function ContactPage() {
                 Get in Touch
               </h1>
               <p className="mt-6 text-xl text-[#001920]/70 leading-relaxed">
-                Ready to discuss your systems requirements? Schedule a consultation, send us a message, or reach out on WhatsApp.
+                Whether you're planning a digital transformation initiative, modernising existing operations or replacing manual processes, we'd be happy to discuss how CANRIS can help digitise your business operations.
               </p>
             </div>
           </section>
@@ -135,7 +136,7 @@ export default function ContactPage() {
                   <div className="rounded-xl border border-border bg-white p-6 md:p-8 shadow-sm">
                     <h2 className="text-2xl font-bold text-[#001920]">Send an Enquiry</h2>
                     <p className="mt-2 text-[#001920]/60">
-                      Tell us about your systems requirements and we will assess the right approach.
+                      Tell us about your operational challenges and we will assess how CANRIS can help digitise your business operations.
                     </p>
                     
                     {isSubmitted ? (

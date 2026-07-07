@@ -4,28 +4,28 @@ import { ArrowRight } from "lucide-react"
 const steps = [
   {
     number: "01",
-    title: "Assess Current Systems",
-    description: "Review existing infrastructure and identify gaps"
+    title: "Understand Operations",
+    description: "Review workflows, existing systems and operational challenges"
   },
   {
     number: "02",
-    title: "Architect the Solution",
-    description: "Design system structure and integration points"
+    title: "Design the Solution",
+    description: "Define the future operational model and supporting system architecture"
   },
   {
     number: "03",
-    title: "Engineer and Integrate",
-    description: "Build and connect system components"
+    title: "Engineer & Integrate",
+    description: "Build, configure and connect the required systems"
   },
   {
     number: "04",
-    title: "Deploy and Enable Usage",
-    description: "Launch systems and enable operations"
+    title: "Deploy & Enable",
+    description: "Implement the solution and prepare teams for successful adoption"
   },
   {
     number: "05",
-    title: "Monitor and Refine Performance",
-    description: "Track performance and optimise continuously"
+    title: "Monitor & Improve",
+    description: "Measure performance, optimise workflows and continuously improve operations"
   }
 ]
 
@@ -35,10 +35,10 @@ export function ProcessPreview() {
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#001920] md:text-4xl">
-            How We Work
+            Our Digitalisation Process
           </h2>
           <p className="mt-4 text-lg text-[#001920]/70 max-w-2xl mx-auto">
-            A structured approach from assessment through to operational deployment.
+            A structured approach from understanding operations through to continuous improvement.
           </p>
         </div>
         

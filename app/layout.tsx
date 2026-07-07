@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Canris | Systems Engineering and Digital Infrastructure',
-  description: 'We engineer, integrate, and coordinate digital systems that run operations. Custom systems engineering, integration, IT project management, and consultancy.',
+  title: 'Canris | Business Digitalisation Company',
+  description: 'CANRIS helps organisations digitise business operations. We replace manual processes and disconnected systems with integrated digital operations that improve visibility, accountability and operational control.',
   generator: 'v0.app',
   icons: {
     icon: '/logo.png',

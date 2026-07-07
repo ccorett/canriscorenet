@@ -4,26 +4,26 @@ import Link from "next/link"
 const services = [
   {
     icon: Settings,
-    title: "Custom Systems Engineering",
-    description: "Design and build structured digital systems that support core operations",
+    title: "Operational Analysis & Process Design",
+    description: "Assess current operations, identify inefficiencies and design structured digital workflows that improve operational performance. We engineer the digital systems that support operational processes, service delivery and organisational growth.",
     href: "/services#systems-engineering"
   },
   {
     icon: Link2,
-    title: "Systems Integration and Automation",
-    description: "Connect platforms, APIs, and tools into a unified system",
+    title: "Systems Integration & Automation",
+    description: "Connect business systems, automate repetitive processes and create seamless operational workflows",
     href: "/services#integration"
   },
   {
     icon: ClipboardList,
     title: "IT Project Management",
-    description: "Coordinate and deliver technical projects using a structured approach",
+    description: "Coordinate digital transformation initiatives using the M.O.R.E Framework to ensure structured implementation and measurable outcomes",
     href: "/services#project-management"
   },
   {
     icon: Lightbulb,
     title: "IT Consultancy",
-    description: "Technical guidance on system architecture and infrastructure decisions",
+    description: "Provide strategic technology guidance that supports business digitalisation, operational improvement and long-term scalability",
     href: "/services#consultancy"
   }
 ]
@@ -34,10 +34,10 @@ export function ServicesOverview() {
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#001920] md:text-4xl">
-            What We Do
+            How We Digitise Business Operations
           </h2>
           <p className="mt-4 text-lg text-[#001920]/70 max-w-2xl mx-auto">
-            Four core services to engineer, integrate, and coordinate digital systems for your organization.
+            We help organisations replace manual processes and disconnected systems with connected digital operations that improve visibility, accountability and control.
           </p>
         </div>
         

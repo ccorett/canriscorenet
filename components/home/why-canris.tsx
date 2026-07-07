@@ -3,23 +3,23 @@ import { Wrench, Brain, Users, Building } from "lucide-react"
 const differentiators = [
   {
     icon: Wrench,
-    title: "Built as Systems, Not Isolated Tools",
-    description: "We build systems with technical rigour and structured methodology"
+    title: "Operations First",
+    description: "We understand how your organisation works before designing the digital systems that support it"
   },
   {
     icon: Brain,
-    title: "Designed for How Your Organization Actually Operates",
-    description: "Solutions designed to work as part of your broader infrastructure"
+    title: "Integrated by Design",
+    description: "We connect people, processes and information into unified operational workflows"
   },
   {
     icon: Users,
-    title: "Delivered with Accountability and Structure",
-    description: "Projects delivered through structured coordination and oversight"
+    title: "Structured Delivery",
+    description: "Digital transformation initiatives delivered with accountability, oversight and measurable outcomes"
   },
   {
     icon: Building,
-    title: "Integrated Across Your Entire Operation",
-    description: "Connect platforms, data, and processes into unified operations"
+    title: "Built for Growth",
+    description: "Solutions designed to scale with your organisation as operations evolve and expand"
   }
 ]
 
@@ -33,10 +33,10 @@ export function WhyCanris() {
               Why Work With Canris?
             </h2>
             <p className="mt-4 text-lg text-[#001920]/70 leading-relaxed">
-              We engineer digital systems that run your operations. Not just interfaces, but the underlying infrastructure that connects your organization.
+              Successful digitalisation requires more than software. It requires understanding operations first, then engineering the systems that support them.
             </p>
             <p className="mt-4 text-[#001920]/60">
-              Canris combines technical engineering with structured project delivery to ensure systems are reliable, integrated, and operationally sound.
+              CANRIS combines operational insight with structured delivery to help organisations achieve connected digital operations with greater visibility, accountability and control.
             </p>
           </div>
           

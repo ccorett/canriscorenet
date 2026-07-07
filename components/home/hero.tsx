@@ -16,14 +16,14 @@ export function HomeHero() {
       <div className="relative mx-auto max-w-5xl">
         <div className="text-center">
           <h1 className="text-balance text-4xl font-bold tracking-tight text-[#001920] md:text-5xl lg:text-6xl">
-            Canris engineers and coordinates the{" "}
-            <span className="text-primary">digital systems</span> your operations depend on
+            We Digitise{" "}
+            <span className="text-primary">Business Operations</span>.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-[#001920]/70 leading-relaxed">
-            We design, build, and integrate reliable systems behind your operations so everything works together and performs consistently.
+            CANRIS helps organisations replace manual processes, spreadsheets, paper forms, disconnected software and fragmented workflows with integrated digital operations that improve visibility, accountability and operational control.
           </p>
           <p className="mx-auto mt-3 max-w-2xl text-base text-[#001920]/60">
-            We work with organizations that require reliable systems, structured execution, and coordinated operations.
+            Behind every successful digital operation is a well-designed system. CANRIS engineers, integrates and coordinates the technology that makes it possible.
           </p>
           
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

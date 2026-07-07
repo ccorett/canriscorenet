@@ -3,28 +3,28 @@ import { AlertCircle, RefreshCw, Layers, Clock, Settings } from "lucide-react"
 const problems = [
   {
     icon: Layers,
-    title: "Disconnected Systems",
-    description: "Platforms and tools that operate in isolation"
+    title: "Information is scattered across multiple systems",
+    description: "Critical data lives in different places with no single view of operations"
   },
   {
     icon: RefreshCw,
-    title: "Manual Processes",
-    description: "Repetitive tasks that should be automated"
-  },
-  {
-    icon: AlertCircle,
-    title: "Undefined Processes",
-    description: "Workflows without clear structure or documentation"
+    title: "Manual processes slow everyday work",
+    description: "Repetitive tasks consume time that should be spent on higher-value work"
   },
   {
     icon: Clock,
-    title: "Projects That Drift",
-    description: "Initiatives that lose direction without structured delivery"
+    title: "Approvals take too long",
+    description: "Paper-based or email-driven workflows delay decisions and delivery"
+  },
+  {
+    icon: AlertCircle,
+    title: "No real-time operational visibility",
+    description: "Leaders cannot see what is happening across the organisation as it happens"
   },
   {
     icon: Settings,
-    title: "Too Many Tools, No Structure",
-    description: "Multiple systems with no unified data flow"
+    title: "Decisions rely on incomplete information",
+    description: "Teams act on outdated or fragmented data instead of connected operational insight"
   }
 ]
 
@@ -37,7 +37,7 @@ export function ProblemsSection() {
             Sound Familiar?
           </h2>
           <p className="mt-4 text-lg text-[#001920]/70 max-w-2xl mx-auto">
-            Many businesses face these challenges when it comes to their digital infrastructure.
+            Many organisations face these operational challenges before they achieve connected digital operations.
           </p>
         </div>
         

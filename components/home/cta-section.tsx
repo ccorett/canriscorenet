@@ -12,10 +12,10 @@ export function CTASection() {
     <section className="bg-[#e6f3e5] px-4 py-16 md:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold text-[#001920] md:text-4xl">
-          Structured Systems Lead to Stable Operations
+          Ready to Digitise Your Business Operations?
         </h2>
         <p className="mt-4 text-lg text-[#001920]/70">
-          Start by defining the right system architecture for your organization.
+          Discover where manual processes, disconnected systems and fragmented information are slowing your organisation and identify opportunities to create connected digital operations.
         </p>
         
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

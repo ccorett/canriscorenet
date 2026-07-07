@@ -31,7 +31,7 @@ export function MoreFramework() {
             The M.O.R.E. Framework
           </h2>
           <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-            Our project management approach ensures systems are delivered in a structured, controlled, and accountable manner
+            Our project management framework ensures digital transformation initiatives are delivered with structure, accountability and measurable business outcomes.
           </p>
         </div>
         

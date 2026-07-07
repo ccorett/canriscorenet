@@ -8,46 +8,46 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Services | Canris",
-  description: "Custom systems engineering, systems integration and automation, IT project management, and IT consultancy services for organizations.",
+  description: "CANRIS helps organisations digitise business operations through operational analysis, systems engineering, integration, automation and structured project delivery.",
 }
 
 const services = [
   {
     id: "systems-engineering",
     icon: Settings,
-    title: "Custom Systems Engineering",
-    description: "Design and build structured digital systems that support core operations including client workflows, transactions, internal processes, and service delivery.",
+    title: "Operational Analysis & Process Design",
+    description: "Assess current operations, identify inefficiencies and design structured digital workflows that improve operational performance. We engineer the digital systems that support operational processes, service delivery and organisational growth.",
     examples: [
-      "Client workflow management systems",
-      "Transaction and payment processing systems",
-      "Internal operations platforms",
-      "Service delivery infrastructure"
+      "Operational workflow assessment and mapping",
+      "Process inefficiency identification and improvement",
+      "Digital workflow design and optimisation",
+      "Operational systems engineering and configuration"
     ],
     bgColor: "bg-white"
   },
   {
     id: "integration",
     icon: Link2,
-    title: "Systems Integration and Automation",
-    description: "Connect platforms, APIs, and tools into a unified system. Automate processes to reduce manual work and improve operational consistency.",
+    title: "Systems Integration & Automation",
+    description: "Connect business systems, automate repetitive processes and create seamless operational workflows that improve efficiency, visibility and operational control.",
     examples: [
-      "API integrations and data synchronization",
-      "Workflow automation between systems",
-      "Unified data pipelines",
-      "Process automation and orchestration"
+      "Business system integration and data synchronisation",
+      "Workflow automation across departments",
+      "Connected operational data pipelines",
+      "Process automation to reduce manual work"
     ],
     bgColor: "bg-[#f4f9f4]"
   },
   {
     id: "project-management",
     icon: ClipboardList,
-    title: "IT Project Management (M.O.R.E Framework)",
-    description: "Coordinate and deliver technical projects using a structured approach that ensures alignment, accountability, and operational impact.",
+    title: "IT Project Management",
+    description: "Coordinate digital transformation initiatives using the M.O.R.E Framework to ensure structured implementation, accountability and measurable business outcomes.",
     examples: [
-      "Technical project coordination",
-      "Stakeholder alignment and communication",
+      "Digital transformation project coordination",
+      "Stakeholder alignment and change management",
       "Delivery oversight and risk management",
-      "Progress tracking and performance review"
+      "Progress tracking and performance measurement"
     ],
     framework: {
       title: "M.O.R.E. Framework",
@@ -64,12 +64,12 @@ const services = [
     id: "consultancy",
     icon: Lightbulb,
     title: "IT Consultancy",
-    description: "Provide technical guidance on system architecture, infrastructure decisions, and digital strategy aligned with operational requirements.",
+    description: "Provide strategic technology guidance that supports business digitalisation, operational improvement and long-term scalability across your organisation.",
     examples: [
-      "System architecture review and design",
-      "Infrastructure assessment and planning",
-      "Technology selection and evaluation",
-      "Digital strategy aligned with operations"
+      "Digital transformation strategy and planning",
+      "Operational technology assessment",
+      "Technology selection aligned with business goals",
+      "Scalability and growth planning for digital operations"
     ],
     bgColor: "bg-[#f4f9f4]"
   }
@@ -91,7 +91,7 @@ export default function ServicesPage() {
                 Our Services
               </h1>
               <p className="mt-6 text-xl text-[#001920]/70 leading-relaxed">
-                We engineer, integrate, and coordinate digital systems that run operations. Technical execution with structured delivery.
+                CANRIS helps organisations digitise business operations. We assess how you work, design connected digital workflows, and deliver integrated solutions that improve visibility, accountability and operational control.
               </p>
             </div>
           </section>
@@ -163,7 +163,7 @@ export default function ServicesPage() {
                 Ready to Get Started?
               </h2>
               <p className="mt-4 text-lg text-white/70">
-                Define the right system architecture for your organization.
+                Discover how CANRIS can help digitise your business operations and create connected, efficient workflows across your organisation.
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <CalendlyTrigger>
