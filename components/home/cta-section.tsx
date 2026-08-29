@@ -6,22 +6,22 @@ import { CalendlyTrigger } from "@/components/calendly-popup"
 
 export function CTASection() {
   const whatsappNumber = "8687349490"
-  const whatsappMessage = encodeURIComponent("Hi, I'd like to discuss my systems requirements with Canris.")
+  const whatsappMessage = encodeURIComponent("Hi, I'd like to get in touch with CANRIS about a marine project.")
 
   return (
     <section className="bg-[#e6f3e5] px-4 py-16 md:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold text-[#001920] md:text-4xl">
-          Ready to Digitise Your Business Operations?
+          Discuss Your Marine Project
         </h2>
         <p className="mt-4 text-lg text-[#001920]/70">
-          Discover where manual processes, disconnected systems and fragmented information are slowing your organisation and identify opportunities to create connected digital operations.
+          Tell us about your requirement and we will assess how CANRIS can structure and coordinate delivery.
         </p>
         
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <CalendlyTrigger>
             <Button size="lg" className="h-12 px-8 text-base bg-primary hover:bg-primary/90 text-white shadow-md">
-              Schedule a Systems Consultation
+              Get in Touch
             </Button>
           </CalendlyTrigger>
           <Button 

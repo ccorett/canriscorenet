@@ -2,22 +2,22 @@ const pillars = [
   {
     letter: "M",
     title: "Manage Perception",
-    description: "Align stakeholders and expectations from the start"
+    description: "Align expectations and responsibilities from the start."
   },
   {
     letter: "O",
     title: "Own Success",
-    description: "Take accountability for delivery and outcomes"
+    description: "Maintain accountability for project delivery and outcomes."
   },
   {
     letter: "R",
     title: "Relentlessly Reassess",
-    description: "Continuously review progress, risks, and performance"
+    description: "Continuously review progress, risks and requirements."
   },
   {
     letter: "E",
     title: "Expand Perspective",
-    description: "Adapt solutions based on broader operational impact"
+    description: "Consider the wider operational impact of project decisions."
   }
 ]
 
@@ -26,12 +26,12 @@ export function MoreFramework() {
     <section className="bg-[#001920] px-4 py-16 md:py-24">
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-12">
-          <p className="text-primary font-medium mb-2">IT Project Management</p>
+          <p className="text-primary font-medium mb-2">Our Project Management Framework</p>
           <h2 className="text-3xl font-bold text-white md:text-4xl">
             The M.O.R.E. Framework
           </h2>
           <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-            Our project management framework ensures digital transformation initiatives are delivered with structure, accountability and measurable business outcomes.
+            The M.O.R.E. Framework guides how CANRIS manages projects and maintains accountability throughout delivery.
           </p>
         </div>
         

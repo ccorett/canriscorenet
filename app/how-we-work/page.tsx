@@ -3,73 +3,61 @@ import { Footer } from "@/components/footer"
 import { CalendlyProvider, CalendlyTrigger } from "@/components/calendly-popup"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Button } from "@/components/ui/button"
-import { Search, Map, Hammer, RefreshCw, TrendingUp, MessageCircle } from "lucide-react"
+import { Search, Map, Hammer, RefreshCw, MessageCircle } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "How We Work | Canris",
-  description: "Learn about CANRIS's structured digitalisation process — from understanding operations through to deployment, enablement and continuous improvement.",
+  description: "Learn about CANRIS's structured approach to marine project delivery from requirement through completion.",
 }
 
 const processSteps = [
   {
     number: "01",
     icon: Search,
-    title: "Understand Operations",
-    description: "We review workflows, existing systems and operational challenges to understand how your organisation works today and where digitalisation can create the greatest impact.",
+    title: "Define",
+    description: "Understand the requirement, vessel, objectives and project constraints.",
     details: [
-      "Workflow and process review",
-      "Existing systems assessment",
-      "Operational challenge identification",
-      "Digitalisation opportunity mapping"
+      "Requirement and objective definition",
+      "Vessel and operational context review",
+      "Project constraint identification",
+      "Delivery scope alignment"
     ]
   },
   {
     number: "02",
     icon: Map,
-    title: "Design the Solution",
-    description: "We define the future operational model and supporting system architecture, ensuring every digital component serves a clear business outcome.",
+    title: "Plan",
+    description: "Define the scope, delivery approach, responsibilities, schedule and resources.",
     details: [
-      "Future operational model design",
-      "Digital workflow planning",
-      "System architecture definition",
-      "Implementation roadmap"
+      "Scope and delivery approach definition",
+      "Responsibility and role assignment",
+      "Schedule and resource planning",
+      "Stakeholder alignment"
     ]
   },
   {
     number: "03",
     icon: Hammer,
-    title: "Engineer & Integrate",
-    description: "We build, configure and connect the required systems, integrating them into your operations to create seamless, connected digital workflows.",
+    title: "Coordinate",
+    description: "Bring together the specialists, suppliers and technology required for delivery.",
     details: [
-      "System engineering and configuration",
-      "Business system integration",
-      "Workflow automation setup",
-      "Quality assurance throughout delivery"
+      "Specialist and supplier coordination",
+      "Technology and equipment alignment",
+      "Project team assembly",
+      "Delivery structure establishment"
     ]
   },
   {
     number: "04",
     icon: RefreshCw,
-    title: "Deploy & Enable",
-    description: "We implement the solution and prepare teams for successful adoption, ensuring digital operations are ready to deliver value from day one.",
+    title: "Deliver",
+    description: "Manage implementation, project performance, documentation and closeout.",
     details: [
-      "Solution deployment and rollout",
-      "Team training and enablement",
-      "Operational handover",
-      "Adoption support"
-    ]
-  },
-  {
-    number: "05",
-    icon: TrendingUp,
-    title: "Monitor & Improve",
-    description: "We measure performance, optimise workflows and continuously improve operations to ensure lasting operational value from your digital transformation.",
-    details: [
-      "Performance measurement and reporting",
-      "Workflow optimisation",
-      "Operational feedback and refinement",
-      "Continuous improvement planning"
+      "Implementation management",
+      "Project performance oversight",
+      "Documentation and reporting",
+      "Project closeout"
     ]
   }
 ]
@@ -78,28 +66,28 @@ const morePillars = [
   {
     letter: "M",
     title: "Manage Perception",
-    description: "Align stakeholders and expectations from the start. Clear understanding prevents misalignment and wasted effort."
+    description: "Align expectations and responsibilities from the start."
   },
   {
     letter: "O",
     title: "Own Success",
-    description: "Take accountability for delivery and outcomes. Structured execution with measurable business results."
+    description: "Maintain accountability for project delivery and outcomes."
   },
   {
     letter: "R",
     title: "Relentlessly Reassess",
-    description: "Continuously review progress, risks, and performance. Adapt as requirements evolve."
+    description: "Continuously review progress, risks and requirements."
   },
   {
     letter: "E",
     title: "Expand Perspective",
-    description: "Adapt solutions based on broader operational impact. Digital operations should serve your organisation today and into the future."
+    description: "Consider the wider operational impact of project decisions."
   }
 ]
 
 export default function HowWeWorkPage() {
   const whatsappNumber = "8687349490"
-  const whatsappMessage = encodeURIComponent("Hi, I'd like to discuss how Canris can help with my project.")
+  const whatsappMessage = encodeURIComponent("Hi, I'd like to get in touch with CANRIS about a marine project.")
 
   return (
     <CalendlyProvider>
@@ -113,7 +101,7 @@ export default function HowWeWorkPage() {
                 How We Work
               </h1>
               <p className="mt-6 text-xl text-[#001920]/70 leading-relaxed">
-                We follow a structured digitalisation process — from understanding how your organisation operates through to deploying connected digital systems and continuously improving performance.
+                A structured approach to marine project delivery from requirement through completion.
               </p>
             </div>
           </section>
@@ -122,7 +110,7 @@ export default function HowWeWorkPage() {
           <section className="bg-white px-4 py-16 md:py-24">
             <div className="mx-auto max-w-5xl">
               <h2 className="text-3xl font-bold text-[#001920] text-center mb-12">
-                Our Digitalisation Process
+                Our Process
               </h2>
               
               <div className="space-y-12">
@@ -166,12 +154,12 @@ export default function HowWeWorkPage() {
           <section className="bg-[#001920] px-4 py-16 md:py-24">
             <div className="mx-auto max-w-5xl">
               <div className="text-center mb-12">
-                <p className="text-primary font-medium mb-2">Our Guiding Framework</p>
+                <p className="text-primary font-medium mb-2">Our Project Management Framework</p>
                 <h2 className="text-3xl font-bold text-white md:text-4xl">
-                  The M.O.R.E. Approach
+                  The M.O.R.E. Framework
                 </h2>
                 <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-                  Our project management framework ensures digital transformation initiatives are delivered with structure, accountability and measurable business outcomes.
+                  The M.O.R.E. Framework guides how CANRIS manages projects and maintains accountability throughout delivery.
                 </p>
               </div>
               
@@ -198,15 +186,15 @@ export default function HowWeWorkPage() {
           <section className="bg-white px-4 py-16 md:py-20">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-bold text-[#001920] md:text-4xl">
-                Ready to Start Your Project?
+                Get in Touch
               </h2>
               <p className="mt-4 text-lg text-[#001920]/70">
-                Discover how CANRIS can help digitise your business operations and create connected, efficient workflows across your organisation.
+                Tell us about your marine project or requirement.
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <CalendlyTrigger>
                   <Button size="lg" className="h-12 px-8 bg-primary hover:bg-primary/90 text-white">
-                    Schedule a Systems Consultation
+                    Get in Touch
                   </Button>
                 </CalendlyTrigger>
                 <Button 

@@ -9,12 +9,10 @@ import { Phone, MessageCircle, Mail, Send } from "lucide-react"
 import { useState } from "react"
 
 const services = [
-  "Operational Analysis & Process Design",
-  "Systems Engineering",
-  "Systems Integration & Automation",
-  "IT Project Management",
-  "IT Consultancy",
-  "Not sure yet"
+  "Marine Project",
+  "Digital Platform",
+  "Technology Partnership",
+  "General Enquiry"
 ]
 
 export default function ContactPage() {
@@ -66,7 +64,7 @@ export default function ContactPage() {
                 Get in Touch
               </h1>
               <p className="mt-6 text-xl text-[#001920]/70 leading-relaxed">
-                Whether you're planning a digital transformation initiative, modernising existing operations or replacing manual processes, we'd be happy to discuss how CANRIS can help digitise your business operations.
+                Tell us about your marine project or requirement.
               </p>
             </div>
           </section>
@@ -89,7 +87,7 @@ export default function ContactPage() {
                         <CalendlyTrigger>
                           <Button className="w-full justify-start bg-primary hover:bg-primary/90 text-white">
                             <Phone className="mr-2 h-4 w-4" />
-                            Schedule a Systems Consultation
+                            Get in Touch
                           </Button>
                         </CalendlyTrigger>
                         <Button 
@@ -136,7 +134,7 @@ export default function ContactPage() {
                   <div className="rounded-xl border border-border bg-white p-6 md:p-8 shadow-sm">
                     <h2 className="text-2xl font-bold text-[#001920]">Send an Enquiry</h2>
                     <p className="mt-2 text-[#001920]/60">
-                      Tell us about your operational challenges and we will assess how CANRIS can help digitise your business operations.
+                      Tell us about your marine project or requirement and we will respond as soon as possible.
                     </p>
                     
                     {isSubmitted ? (
@@ -209,14 +207,14 @@ export default function ContactPage() {
                         
                         <div>
                           <label className="block text-sm font-medium text-[#001920] mb-1.5">
-                            Service of Interest
+                            Area of Interest
                           </label>
                           <select
                             value={formData.service}
                             onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                             className="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-[#001920] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                           >
-                            <option value="">Select a service</option>
+                            <option value="">Select an area</option>
                             {services.map((service) => (
                               <option key={service} value={service}>{service}</option>
                             ))}
@@ -233,7 +231,7 @@ export default function ContactPage() {
                             value={formData.message}
                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                             className="w-full rounded-lg border border-border bg-white px-4 py-2.5 text-[#001920] placeholder:text-[#001920]/40 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none"
-                            placeholder="Tell us about your project or needs..."
+                            placeholder="Tell us about your project or requirement..."
                           />
                         </div>
                         

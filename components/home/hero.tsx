@@ -6,7 +6,7 @@ import { CalendlyTrigger } from "@/components/calendly-popup"
 
 export function HomeHero() {
   const whatsappNumber = "8687349490"
-  const whatsappMessage = encodeURIComponent("Hi, I'm interested in learning more about Canris services.")
+  const whatsappMessage = encodeURIComponent("Hi, I'd like to get in touch with CANRIS about a marine project.")
 
   return (
     <section className="relative overflow-hidden bg-white px-4 py-20 md:py-28 lg:py-32">
@@ -16,20 +16,20 @@ export function HomeHero() {
       <div className="relative mx-auto max-w-5xl">
         <div className="text-center">
           <h1 className="text-balance text-4xl font-bold tracking-tight text-[#001920] md:text-5xl lg:text-6xl">
-            We Digitise{" "}
-            <span className="text-primary">Business Operations</span>.
+            Marine Projects.{" "}
+            <span className="text-primary">Structured for Delivery</span>.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-[#001920]/70 leading-relaxed">
-            CANRIS helps organisations replace manual processes, spreadsheets, paper forms, disconnected software and fragmented workflows with integrated digital operations that improve visibility, accountability and operational control.
+            CANRIS is a Marine Project Management Company that structures, coordinates and delivers marine projects from requirement through completion.
           </p>
           <p className="mx-auto mt-3 max-w-2xl text-base text-[#001920]/60">
-            Behind every successful digital operation is a well-designed system. CANRIS engineers, integrates and coordinates the technology that makes it possible.
+            We combine project management, specialist expertise and digital technology to support effective project delivery and marine operations.
           </p>
           
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <CalendlyTrigger>
               <Button size="lg" className="h-12 px-8 text-base bg-primary hover:bg-primary/90 text-white shadow-md">
-                Schedule a Systems Consultation
+                Get in Touch
               </Button>
             </CalendlyTrigger>
             <Button 

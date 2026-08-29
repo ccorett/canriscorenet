@@ -7,55 +7,55 @@ import { Settings, Link2, ClipboardList, Lightbulb, Check, MessageCircle } from 
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Services | Canris",
-  description: "CANRIS helps organisations digitise business operations through operational analysis, systems engineering, integration, automation and structured project delivery.",
+  title: "Marine Project Management | Canris",
+  description: "CANRIS is a Marine Project Management Company that structures, coordinates and delivers marine projects, and develops digital platforms that support marine operations and compliance.",
 }
 
 const services = [
   {
     id: "systems-engineering",
     icon: Settings,
-    title: "Operational Analysis & Process Design",
-    description: "Assess current operations, identify inefficiencies and design structured digital workflows that improve operational performance. We engineer the digital systems that support operational processes, service delivery and organisational growth.",
+    title: "Vessel Upgrades & Refits",
+    description: "Coordinate projects involving vessel modifications, upgrades and refit activities.",
     examples: [
-      "Operational workflow assessment and mapping",
-      "Process inefficiency identification and improvement",
-      "Digital workflow design and optimisation",
-      "Operational systems engineering and configuration"
+      "Vessel modification planning and coordination",
+      "Refit activity management",
+      "Stakeholder and supplier coordination",
+      "Project documentation and closeout"
     ],
     bgColor: "bg-white"
   },
   {
     id: "integration",
     icon: Link2,
-    title: "Systems Integration & Automation",
-    description: "Connect business systems, automate repetitive processes and create seamless operational workflows that improve efficiency, visibility and operational control.",
+    title: "Equipment & Technology Deployment",
+    description: "Manage the introduction and installation of equipment and technology aboard vessels.",
     examples: [
-      "Business system integration and data synchronisation",
-      "Workflow automation across departments",
-      "Connected operational data pipelines",
-      "Process automation to reduce manual work"
+      "Equipment installation project management",
+      "Technology deployment coordination",
+      "Specialist and supplier management",
+      "Implementation oversight"
     ],
     bgColor: "bg-[#f4f9f4]"
   },
   {
     id: "project-management",
     icon: ClipboardList,
-    title: "IT Project Management",
-    description: "Coordinate digital transformation initiatives using the M.O.R.E Framework to ensure structured implementation, accountability and measurable business outcomes.",
+    title: "Fleet Projects",
+    description: "Coordinate projects involving multiple vessels, stakeholders, suppliers and operational requirements. PROMPT — Professional Maritime Project Team — is CANRIS's model for assembling the appropriate specialists and technical capability around the requirements of each project. The project defines the team.",
     examples: [
-      "Digital transformation project coordination",
-      "Stakeholder alignment and change management",
-      "Delivery oversight and risk management",
-      "Progress tracking and performance measurement"
+      "Multi-vessel project coordination",
+      "Fleet-wide initiative management",
+      "Cross-stakeholder delivery structure",
+      "Operational requirement alignment"
     ],
     framework: {
       title: "M.O.R.E. Framework",
       pillars: [
-        { letter: "M", name: "Manage Perception", desc: "Align stakeholders and expectations from the start" },
-        { letter: "O", name: "Own Success", desc: "Take accountability for delivery and outcomes" },
-        { letter: "R", name: "Relentlessly Reassess", desc: "Continuously review progress, risks, and performance" },
-        { letter: "E", name: "Expand Perspective", desc: "Adapt solutions based on broader operational impact" }
+        { letter: "M", name: "Manage Perception", desc: "Align expectations and responsibilities from the start." },
+        { letter: "O", name: "Own Success", desc: "Maintain accountability for project delivery and outcomes." },
+        { letter: "R", name: "Relentlessly Reassess", desc: "Continuously review progress, risks and requirements." },
+        { letter: "E", name: "Expand Perspective", desc: "Consider the wider operational impact of project decisions." }
       ]
     },
     bgColor: "bg-white"
@@ -63,13 +63,13 @@ const services = [
   {
     id: "consultancy",
     icon: Lightbulb,
-    title: "IT Consultancy",
-    description: "Provide strategic technology guidance that supports business digitalisation, operational improvement and long-term scalability across your organisation.",
+    title: "Digital Platform",
+    description: "CANRIS is developing digital platforms to support marine operations and compliance, beginning with a platform for managing small commercial vessel inspections, deficiencies and compliance records.",
     examples: [
-      "Digital transformation strategy and planning",
-      "Operational technology assessment",
-      "Technology selection aligned with business goals",
-      "Scalability and growth planning for digital operations"
+      "Marine operations support platforms",
+      "Compliance record management",
+      "Vessel inspection and deficiency tracking",
+      "Operational visibility and control"
     ],
     bgColor: "bg-[#f4f9f4]"
   }
@@ -77,7 +77,7 @@ const services = [
 
 export default function ServicesPage() {
   const whatsappNumber = "8687349490"
-  const whatsappMessage = encodeURIComponent("Hi, I'd like to learn more about Canris services.")
+  const whatsappMessage = encodeURIComponent("Hi, I'd like to get in touch with CANRIS about a marine project.")
 
   return (
     <CalendlyProvider>
@@ -88,10 +88,10 @@ export default function ServicesPage() {
           <section className="bg-[#e6f3e5] px-4 py-16 md:py-24">
             <div className="mx-auto max-w-4xl text-center">
               <h1 className="text-4xl font-bold text-[#001920] md:text-5xl">
-                Our Services
+                Marine Project Management
               </h1>
               <p className="mt-6 text-xl text-[#001920]/70 leading-relaxed">
-                CANRIS helps organisations digitise business operations. We assess how you work, design connected digital workflows, and deliver integrated solutions that improve visibility, accountability and operational control.
+                CANRIS structures, coordinates and manages marine projects, providing the project leadership required to move from requirement through implementation and closeout.
               </p>
             </div>
           </section>
@@ -115,13 +115,13 @@ export default function ServicesPage() {
                     </p>
                     <CalendlyTrigger>
                       <Button className="mt-6 bg-primary hover:bg-primary/90 text-white">
-                        Schedule a Systems Consultation
+                        Get in Touch
                       </Button>
                     </CalendlyTrigger>
                   </div>
                   
                   <div className="rounded-xl border border-border bg-white p-6 shadow-sm">
-                    <h3 className="font-semibold text-[#001920] mb-4">What this includes:</h3>
+                    <h3 className="font-semibold text-[#001920] mb-4">Examples include:</h3>
                     <ul className="space-y-3">
                       {service.examples.map((example, idx) => (
                         <li key={idx} className="flex items-start gap-3">
@@ -163,12 +163,12 @@ export default function ServicesPage() {
                 Ready to Get Started?
               </h2>
               <p className="mt-4 text-lg text-white/70">
-                Discover how CANRIS can help digitise your business operations and create connected, efficient workflows across your organisation.
+                Tell us about your marine project or requirement.
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <CalendlyTrigger>
                   <Button size="lg" className="h-12 px-8 bg-primary hover:bg-primary/90 text-white">
-                    Schedule a Systems Consultation
+                    Get in Touch
                   </Button>
                 </CalendlyTrigger>
                 <Button 

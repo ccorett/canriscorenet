@@ -20,7 +20,7 @@ export function Footer() {
           <div>
             <span className="text-xl font-semibold text-white">Canris</span>
             <p className="mt-4 text-sm text-white/60 max-w-xs">
-              CANRIS helps organisations digitise business operations through operational analysis, systems engineering, integration, automation and structured project delivery.
+              CANRIS is a Marine Project Management Company delivering structured marine projects and developing digital platforms that support marine operations and compliance.
             </p>
           </div>
           

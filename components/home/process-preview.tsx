@@ -4,28 +4,23 @@ import { ArrowRight } from "lucide-react"
 const steps = [
   {
     number: "01",
-    title: "Understand Operations",
-    description: "Review workflows, existing systems and operational challenges"
+    title: "Define",
+    description: "Understand the requirement, vessel, objectives and project constraints."
   },
   {
     number: "02",
-    title: "Design the Solution",
-    description: "Define the future operational model and supporting system architecture"
+    title: "Plan",
+    description: "Define the scope, delivery approach, responsibilities, schedule and resources."
   },
   {
     number: "03",
-    title: "Engineer & Integrate",
-    description: "Build, configure and connect the required systems"
+    title: "Coordinate",
+    description: "Bring together the specialists, suppliers and technology required for delivery."
   },
   {
     number: "04",
-    title: "Deploy & Enable",
-    description: "Implement the solution and prepare teams for successful adoption"
-  },
-  {
-    number: "05",
-    title: "Monitor & Improve",
-    description: "Measure performance, optimise workflows and continuously improve operations"
+    title: "Deliver",
+    description: "Manage implementation, project performance, documentation and closeout."
   }
 ]
 
@@ -35,10 +30,10 @@ export function ProcessPreview() {
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#001920] md:text-4xl">
-            Our Digitalisation Process
+            How We Work
           </h2>
           <p className="mt-4 text-lg text-[#001920]/70 max-w-2xl mx-auto">
-            A structured approach from understanding operations through to continuous improvement.
+            A structured approach to marine project delivery from requirement through completion.
           </p>
         </div>
         

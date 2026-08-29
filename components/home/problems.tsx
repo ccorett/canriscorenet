@@ -3,28 +3,28 @@ import { AlertCircle, RefreshCw, Layers, Clock, Settings } from "lucide-react"
 const problems = [
   {
     icon: Layers,
-    title: "Information is scattered across multiple systems",
-    description: "Critical data lives in different places with no single view of operations"
+    title: "Multiple Stakeholders",
+    description: "Clients, contractors, suppliers and specialists must work toward the same outcome."
   },
   {
     icon: RefreshCw,
-    title: "Manual processes slow everyday work",
-    description: "Repetitive tasks consume time that should be spent on higher-value work"
-  },
-  {
-    icon: Clock,
-    title: "Approvals take too long",
-    description: "Paper-based or email-driven workflows delay decisions and delivery"
+    title: "Unclear Responsibilities",
+    description: "Poorly defined roles can create gaps in project delivery."
   },
   {
     icon: AlertCircle,
-    title: "No real-time operational visibility",
-    description: "Leaders cannot see what is happening across the organisation as it happens"
+    title: "Technical Requirements",
+    description: "Equipment, vessel requirements and operational needs must align."
+  },
+  {
+    icon: Clock,
+    title: "Project Delays",
+    description: "Coordination issues can affect schedules, costs and vessel availability."
   },
   {
     icon: Settings,
-    title: "Decisions rely on incomplete information",
-    description: "Teams act on outdated or fragmented data instead of connected operational insight"
+    title: "Fragmented Information",
+    description: "Project decisions, documentation and progress need to remain visible and controlled."
   }
 ]
 
@@ -34,10 +34,10 @@ export function ProblemsSection() {
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#001920] md:text-4xl">
-            Sound Familiar?
+            Marine Projects Can Get Complicated.
           </h2>
           <p className="mt-4 text-lg text-[#001920]/70 max-w-2xl mx-auto">
-            Many organisations face these operational challenges before they achieve connected digital operations.
+            Multiple stakeholders, technical requirements, suppliers and operational constraints can make marine projects difficult to coordinate.
           </p>
         </div>
         

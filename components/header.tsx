@@ -17,7 +17,7 @@ const navLinks = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const whatsappNumber = "8687349490"
-  const whatsappMessage = encodeURIComponent("Hi, I'm interested in learning more about Canris services.")
+  const whatsappMessage = encodeURIComponent("Hi, I'd like to get in touch with CANRIS about a marine project.")
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
@@ -42,7 +42,7 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <CalendlyTrigger>
             <Button size="sm" className="bg-primary hover:bg-primary/90 text-white shadow-sm">
-              Schedule Consultation
+              Get in Touch
             </Button>
           </CalendlyTrigger>
         </div>
@@ -88,7 +88,7 @@ export function Header() {
               </Button>
               <CalendlyTrigger>
                 <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
-                  Schedule Consultation
+                  Get in Touch
                 </Button>
               </CalendlyTrigger>
             </div>
