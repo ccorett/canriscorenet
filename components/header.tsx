@@ -6,6 +6,7 @@ import { useState } from "react"
 
 import Link from "next/link"
 import { CalendlyTrigger } from "@/components/calendly-popup"
+import { cn } from "@/lib/utils"
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -54,9 +55,10 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden rounded-lg p-2 transition-colors active:bg-[#e6f3e5]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? (
             <X className="h-6 w-6 text-[#001920]" />
@@ -66,48 +68,65 @@ export function Header() {
         </button>
       </div>
 
+      {/* Mobile menu backdrop */}
+      <div
+        className={cn(
+          "fixed inset-0 top-16 z-40 bg-[#001920]/20 backdrop-blur-[2px] transition-opacity duration-300 md:hidden",
+          mobileMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        )}
+        onClick={() => setMobileMenuOpen(false)}
+        aria-hidden={!mobileMenuOpen}
+      />
+
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="bg-white px-4 py-4 md:hidden shadow-lg">
-          <nav className="flex flex-col gap-1">
-            {navLinks.map((link) => (
+      <div
+        className={cn(
+          "relative z-50 overflow-hidden border-t border-border/60 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300 ease-out md:hidden",
+          mobileMenuOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <nav className="flex flex-col gap-1 px-4 py-4">
+          {navLinks.map((link, index) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "rounded-lg px-3 py-3 text-sm font-medium text-[#001920]/70 transition-all duration-300 active:scale-[0.98] active:bg-[#e6f3e5] hover:bg-secondary hover:text-primary",
+                mobileMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"
+              )}
+              style={{ transitionDelay: mobileMenuOpen ? `${index * 50}ms` : "0ms" }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="mt-2 flex flex-col gap-2 border-t border-border pt-4">
+            <Button variant="outline" size="sm" className="h-11 justify-start mobile-touch-card" asChild>
               <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-[#001920]/70 transition-colors hover:bg-secondary hover:text-primary"
+                href="/#vessel-pre-inspection"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link.label}
+                Vessel Pre-Inspection
               </Link>
-            ))}
-            <div className="flex flex-col gap-2 pt-4 mt-2 border-t border-border">
-              <Button variant="outline" size="sm" className="justify-start" asChild>
-                <Link
-                  href="/#vessel-pre-inspection"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Vessel Pre-Inspection
-                </Link>
+            </Button>
+            <Button variant="outline" size="sm" className="h-11 justify-start mobile-touch-card" asChild>
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="mr-2 h-4 w-4" />
+                WhatsApp Us
+              </a>
+            </Button>
+            <CalendlyTrigger>
+              <Button size="sm" className="h-11 w-full bg-primary hover:bg-primary/90 mobile-touch-card">
+                Get in Touch
               </Button>
-              <Button variant="outline" size="sm" className="justify-start" asChild>
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MessageCircle className="mr-2 h-4 w-4" />
-                  WhatsApp Us
-                </a>
-              </Button>
-              <CalendlyTrigger>
-                <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
-                  Get in Touch
-                </Button>
-              </CalendlyTrigger>
-            </div>
-          </nav>
-        </div>
-      )}
+            </CalendlyTrigger>
+          </div>
+        </nav>
+      </div>
     </header>
   )
 }
