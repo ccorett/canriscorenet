@@ -7,6 +7,7 @@ import { HomeHero } from "@/components/home/hero"
 import { ClaritySection } from "@/components/home/clarity"
 import { ProblemsSection } from "@/components/home/problems"
 import { ServicesOverview } from "@/components/home/services-overview"
+import { VesselPreInspectionSection } from "@/components/home/vessel-pre-inspection"
 import { WhyCanris } from "@/components/home/why-canris"
 import { MoreFramework } from "@/components/home/more-framework"
 import { ProcessPreview } from "@/components/home/process-preview"
@@ -22,6 +23,7 @@ export default function Home() {
           <ClaritySection />
           <ProblemsSection />
           <ServicesOverview />
+          <VesselPreInspectionSection />
           <CTASection />
           <WhyCanris />
           <MoreFramework />

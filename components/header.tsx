@@ -40,6 +40,11 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
+          <Button variant="outline" size="sm" className="border-primary/30 text-[#001920] hover:bg-primary/5 hover:border-primary/50" asChild>
+            <Link href="/#vessel-pre-inspection">
+              Vessel Pre-Inspection
+            </Link>
+          </Button>
           <CalendlyTrigger>
             <Button size="sm" className="bg-primary hover:bg-primary/90 text-white shadow-sm">
               Get in Touch
@@ -76,6 +81,14 @@ export function Header() {
               </Link>
             ))}
             <div className="flex flex-col gap-2 pt-4 mt-2 border-t border-border">
+              <Button variant="outline" size="sm" className="justify-start" asChild>
+                <Link
+                  href="/#vessel-pre-inspection"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Vessel Pre-Inspection
+                </Link>
+              </Button>
               <Button variant="outline" size="sm" className="justify-start" asChild>
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
