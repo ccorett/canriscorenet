@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { MobileReveal } from "@/components/mobile-reveal"
 
 export function VesselPreInspectionSection() {
@@ -11,28 +10,34 @@ export function VesselPreInspectionSection() {
       <div className="mx-auto max-w-3xl text-center">
         <MobileReveal>
           <p className="text-sm font-medium uppercase tracking-wide text-primary">
-            COMING SOON
+            VESSEL PRE-INSPECTION PLATFORM
           </p>
           <h2 className="mt-3 text-3xl font-bold text-[#001920] md:text-4xl">
             Vessel Pre-Inspection Platform
           </h2>
-          <p className="mt-4 text-lg text-[#001920]/70 leading-relaxed">
-            A digital platform being developed by CANRIS to support structured small commercial vessel pre-inspections, deficiency tracking and compliance readiness.
-          </p>
-          <p className="mt-3 text-base text-[#001920]/60">
-            Built for qualified inspectors, surveyors, vessel operators and marine organisations.
-          </p>
         </MobileReveal>
-        <MobileReveal delay={120}>
-          <div className="mt-8">
-            <Button
-              size="lg"
-              className="h-12 w-full px-8 text-base sm:w-auto"
-              disabled
-              aria-disabled="true"
+
+        <MobileReveal delay={100}>
+          <div className="relative mt-6 overflow-hidden rounded-xl border border-border/60 bg-white/90 px-6 py-10 shadow-sm md:mt-8 md:px-10 md:py-12">
+            <div
+              className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center overflow-hidden"
+              aria-hidden="true"
             >
-              Coming Soon
-            </Button>
+              <div className="absolute w-[145%] rotate-[-32deg] bg-primary py-3 shadow-[0_6px_24px_rgba(90,169,233,0.4)] md:py-4">
+                <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-white sm:text-sm md:text-base md:tracking-[0.35em]">
+                  COMING SOON
+                </p>
+              </div>
+            </div>
+
+            <div className="relative z-[1]">
+              <p className="text-lg text-[#001920]/70 leading-relaxed">
+                A digital platform by CANRIS for structured small commercial vessel pre-inspections, deficiency tracking, documentation and compliance readiness.
+              </p>
+              <p className="mt-3 text-base text-[#001920]/60">
+                Built for qualified inspectors, surveyors, vessel operators and marine organisations.
+              </p>
+            </div>
           </div>
         </MobileReveal>
       </div>
